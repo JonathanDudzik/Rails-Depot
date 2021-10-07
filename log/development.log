@@ -188,3 +188,439 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 1.0ms | Allocations: 4718)
 
 
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProduct Destroy (12.3ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (8.1ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Docker for Rails Developers"], ["description", "<p>\n      <em>Build, Ship, and Run Your Applications Everywhere</em>\n      Docker does for DevOps what Rails did for web development—it gives you \n      a new set of superpowers. Gone are “works on my machine” woes and lengthy \n      setup tasks, replaced instead by a simple, consistent, Docker-based \n      development environment that will have your team up and running in seconds. \n      Gain hands-on, real-world experience with a tool that’s rapidly becoming \n      fundamental to software development. Go from zero all the way to production \n      as Docker transforms the massive leap of deploying your app in the cloud \n      into a baby step.\n      </p>"], ["image_url", "ridocker.jpg"], ["price", 38], ["created_at", "2021-10-07 18:53:49.749756"], ["updated_at", "2021-10-07 18:53:49.749756"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Build Chatbot Interactions"], ["description", "<p>\n      <em>Responsive, Intuitive Interfaces with Ruby</em>\n      The next step in the evolution of user interfaces is here. \n      Chatbots let your users interact with your service in their\n      own natural language. Use free and open source tools along \n      with Ruby to build creative, useful, and unexpected interactions \n      for users. Take advantage of the Lita framework’s step-by-step \n      implementation strategy to simplify bot development and testing.\n      From novices to experts, chatbots are an area in which everyone \n      can participate. Exercise your creativity by creating chatbot \n      skills for communicating, information, and fun.\n      </p>"], ["image_url", "dpchat.jpg"], ["price", 20], ["created_at", "2021-10-07 18:53:49.762256"], ["updated_at", "2021-10-07 18:53:49.762256"]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Programming Crystal"], ["description", "<p>\n      <em>Create High-Performance, Safe, Concurrent Apps</em>\n      Crystal is for Ruby programmers who want more performance or for \n      developers who enjoy working in a high-level scripting environment. Crystal \n      combines native execution speed and concurrency with Ruby-like syntax, so \n      you will feel right at home. This book, the first available on Crystal, \n      shows you how to write applications that have the beauty and elegance of a \n      modern language, combined with the power of types and modern concurrency \n      tooling. Now you can write beautiful code that runs faster, scales better, \n      and is a breeze to deploy.\n      </p>"], ["image_url", "crystal.jpg"], ["price", 40], ["created_at", "2021-10-07 18:53:49.780661"], ["updated_at", "2021-10-07 18:53:49.780661"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2021-10-07 14:55:18 -0400
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/jdudzik/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/jdudzik/.rbenv/versions/3.0.1/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 35.2ms | Allocations: 495)
+Completed 200 OK in 75ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 3630)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 14:55:55 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (5.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 6707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 328.6ms | Allocations: 23329)
+Completed 200 OK in 335ms (Views: 313.0ms | ActiveRecord: 17.9ms | Allocations: 25396)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 15:03:29 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (5.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 72.5ms | Allocations: 4832)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 224.8ms | Allocations: 17329)
+Completed 200 OK in 229ms (Views: 226.0ms | ActiveRecord: 33.1ms | Allocations: 17935)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 15:42:15 -0400
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (8.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 33.5ms | Allocations: 6765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 342.8ms | Allocations: 31702)
+Completed 200 OK in 374ms (Views: 326.8ms | ActiveRecord: 22.5ms | Allocations: 35953)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 15:42:18 -0400
+Processing by ProductsController#index as */*
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1421)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 7819)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 1.8ms | Allocations: 8566)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2021-10-07 15:43:44 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 391)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3988)
+Completed 200 OK in 44ms (Views: 15.0ms | ActiveRecord: 2.2ms | Allocations: 8141)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2021-10-07 15:43:47 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 64.0ms | Allocations: 3812)
+  Rendered products/edit.html.erb within layouts/application (Duration: 66.7ms | Allocations: 4254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | Allocations: 7889)
+Completed 200 OK in 83ms (Views: 78.1ms | ActiveRecord: 0.9ms | Allocations: 9246)
+
+
+Started GET "/products/2/edit" for 127.0.0.1 at 2021-10-07 15:43:52 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.7ms | Allocations: 1101)
+  Rendered products/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4732)
+Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 1.8ms | Allocations: 6061)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:12:27 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 3451)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3536)
+Completed 500 Internal Server Error in 21ms (Allocations: 4898)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= truncate(strip_tags(product.description), length 80) %></td>
+        <td><%= product.image_url %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <h1>Products</h1>
+4:    
+5:    <table>
+6:      <thead>
+7:        <tr>
+8:          <th>Title</th>
+9:          <th>Description</th>
+10:          <th>Image url</th>
+11:          <th>Price</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <% @products.each do |product| %>
+18:          <tr>
+19:            <td><%= product.title %></td>
+20:            <td><%= truncate(strip_tags(product.description), length 80) %></td>
+21:            <td><%= product.image_url %></td>
+22:            <td><%= product.price %></td>
+23:            <td><%= link_to 'Show', product %></td>
+24:            <td><%= link_to 'Edit', edit_product_path(product) %></td>
+25:            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+26:          </tr>
+27:        <% end %>
+28:      </tbody>
+29:    </table>
+30:    
+31:    <br>
+32:    
+33:    <%= link_to 'New Product', new_product_path %>
+  
+app/views/products/index.html.erb:20: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:20: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:36: syntax error, unexpected `end', expecting end-of-input
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:13:27 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1328)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1404)
+Completed 500 Internal Server Error in 9ms (Allocations: 2778)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.title %></td>
+        <td><%= truncate(strip_tags(product.description), length 80) %></td>
+        <td><%= product.image_url %></td>
+        <td><%= product.price %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+
+):
+1:    <% if notice %>
+2:      <p id="notice"><%= notice %></p>
+3:    <% end %>
+4:    
+5:    <h1>Products</h1>
+6:    
+7:    <table>
+8:      <thead>
+9:        <tr>
+10:          <th>Title</th>
+11:          <th>Description</th>
+12:          <th>Image url</th>
+13:          <th>Price</th>
+14:          <th colspan="3"></th>
+15:        </tr>
+16:      </thead>
+17:    
+18:      <tbody>
+19:        <% @products.each do |product| %>
+20:          <tr>
+21:            <td><%= product.title %></td>
+22:            <td><%= truncate(strip_tags(product.description), length 80) %></td>
+23:            <td><%= product.image_url %></td>
+24:            <td><%= product.price %></td>
+25:            <td><%= link_to 'Show', product %></td>
+26:            <td><%= link_to 'Edit', edit_product_path(product) %></td>
+27:            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+28:          </tr>
+29:        <% end %>
+30:      </tbody>
+31:    </table>
+32:    
+33:    <br>
+34:    
+35:    <%= link_to 'New Product', new_product_path %>
+  
+app/views/products/index.html.erb:22: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:22: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:22: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:22: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:22: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+app/views/products/index.html.erb:22: syntax error, unexpected integer literal, expecting `do' or '{' or '('
+app/views/products/index.html.erb:38: syntax error, unexpected `end', expecting end-of-input
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:14:30 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (8.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 100.6ms | Allocations: 6294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 117.8ms | Allocations: 10215)
+Completed 200 OK in 123ms (Views: 120.9ms | ActiveRecord: 38.7ms | Allocations: 11623)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:18:05 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 17.6ms | Allocations: 4381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 8088)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 1.2ms | Allocations: 9476)
+
+
+Started GET "/products/2" for 127.0.0.1 at 2021-10-07 16:19:21 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 310)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3809)
+Completed 200 OK in 23ms (Views: 14.2ms | ActiveRecord: 2.5ms | Allocations: 5370)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:20:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4407)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 29.4ms | Allocations: 8126)
+Completed 200 OK in 34ms (Views: 31.2ms | ActiveRecord: 1.0ms | Allocations: 9462)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:20:37 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 4372)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 8085)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 1.1ms | Allocations: 9478)
+
+
+Started DELETE "/products/2" for 127.0.0.1 at 2021-10-07 16:37:07 -0400
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mProduct Load (4.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:62:in `set_product'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:52:in `destroy'
+  [1m[36mProduct Destroy (1.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/products
+Completed 302 Found in 69ms (ActiveRecord: 31.1ms | Allocations: 6538)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:37:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2782)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 6187)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.1ms | Allocations: 6670)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6958702983027556635)[0m
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6958702983027556635)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:43:32 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (5.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 42.6ms | Allocations: 9696)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 13203)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 22.9ms | Allocations: 14593)
+
+
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:43:48 -0400
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 146.6ms | Allocations: 13154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 167.9ms | Allocations: 17240)
+Completed 200 OK in 189ms (Views: 129.3ms | ActiveRecord: 45.6ms | Allocations: 21507)
+
+
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mProduct Destroy (7.0ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Docker for Rails Developers"], ["description", "<p>\n      <em>Build, Ship, and Run Your Applications Everywhere</em>\n      Docker does for DevOps what Rails did for web development—it gives you \n      a new set of superpowers. Gone are “works on my machine” woes and lengthy \n      setup tasks, replaced instead by a simple, consistent, Docker-based \n      development environment that will have your team up and running in seconds. \n      Gain hands-on, real-world experience with a tool that’s rapidly becoming \n      fundamental to software development. Go from zero all the way to production \n      as Docker transforms the massive leap of deploying your app in the cloud \n      into a baby step.\n      </p>"], ["image_url", "ridocker.jpg"], ["price", 38], ["created_at", "2021-10-07 20:44:01.511778"], ["updated_at", "2021-10-07 20:44:01.511778"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Build Chatbot Interactions"], ["description", "<p>\n      <em>Responsive, Intuitive Interfaces with Ruby</em>\n      The next step in the evolution of user interfaces is here. \n      Chatbots let your users interact with your service in their\n      own natural language. Use free and open source tools along \n      with Ruby to build creative, useful, and unexpected interactions \n      for users. Take advantage of the Lita framework’s step-by-step \n      implementation strategy to simplify bot development and testing.\n      From novices to experts, chatbots are an area in which everyone \n      can participate. Exercise your creativity by creating chatbot \n      skills for communicating, information, and fun.\n      </p>"], ["image_url", "dpchat.jpg"], ["price", 20], ["created_at", "2021-10-07 20:44:01.516777"], ["updated_at", "2021-10-07 20:44:01.516777"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Programming Crystal"], ["description", "<p>\n      <em>Create High-Performance, Safe, Concurrent Apps</em>\n      Crystal is for Ruby programmers who want more performance or for \n      developers who enjoy working in a high-level scripting environment. Crystal \n      combines native execution speed and concurrency with Ruby-like syntax, so \n      you will feel right at home. This book, the first available on Crystal, \n      shows you how to write applications that have the beauty and elegance of a \n      modern language, combined with the power of types and modern concurrency \n      tooling. Now you can write beautiful code that runs faster, scales better, \n      and is a breeze to deploy.\n      </p>"], ["image_url", "crystal.jpg"], ["price", 40], ["created_at", "2021-10-07 20:44:01.520161"], ["updated_at", "2021-10-07 20:44:01.520161"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/products" for 127.0.0.1 at 2021-10-07 16:44:05 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:19
+  Rendered products/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3888)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 7340)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 1.0ms | Allocations: 7920)
+
+
